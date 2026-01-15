@@ -1,0 +1,5 @@
+SAFETY RULES FOR CODEX:
+- Only edit files inside this clinote repository.
+- Keep src logic modular (parser/*, render/*).
+- Do not delete existing files unless explicitly asked.
+- Ensure cargo test passes.
