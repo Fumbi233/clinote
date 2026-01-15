@@ -80,6 +80,14 @@ Use `clinote sample` to generate synthetic notes plus gold JSON outputs in a fol
 2. In GitHub repo settings, enable Pages from branch `main` and folder `/docs`.
 3. Confirm your Pages URL works: `https://<your-username>.github.io/<repo-name>/`.
 
+## Release workflow
+Trigger a GitHub Release by tagging and pushing:
+```bash
+git tag v0.1.0
+git push --tags
+```
+Artifacts will appear under GitHub Releases. The GitHub Pages binary remains separate for the exam requirement.
+
 ## Binary hosting for downloads
 Place compiled binaries in `docs/downloads/` so the download page can serve them. Required file:
 - `docs/downloads/clinote-aarch64-linux`
