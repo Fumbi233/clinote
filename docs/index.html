@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,10 +7,133 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <h1>Clinote CLI</h1>
-    <p>Convert messy clinical notes into structured SOAP / H&P / Discharge formats.</p>
-    <p><a href="download.html">Download</a> · <a href="docs.html">Docs</a> · <a href="pricing.html">Pricing</a></p>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Clinote logo" />
+        <span>Clinote CLI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/your-org/clinote" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Deterministic clinical documentation</p>
+        <h1>Turn messy notes into structured SOAP, H&amp;P, and Discharge formats.</h1>
+        <p class="lead">
+          Clinote CLI standardizes clinical notes with transparent rules and configurable mappings.
+          No ML summarization, just consistent outputs that support quality and interoperability.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="download.html">Download CLI</a>
+          <a class="btn ghost" href="docs.html">View Docs</a>
+        </div>
+        <div class="hero-meta">
+          <span>Outputs: Markdown, JSON, CSV</span>
+          <span>Bundle-aware parsing</span>
+          <span>Interactive review mode</span>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-card">
+          <p class="panel-title">Deterministic pipeline</p>
+          <ul>
+            <li>Normalize and clean lines</li>
+            <li>Detect headings and aliases</li>
+            <li>Apply fallback heuristics</li>
+            <li>Render standardized output</li>
+          </ul>
+        </div>
+        <div class="panel-card accent">
+          <p class="panel-title">Health informatics focus</p>
+          <p>Documentation quality, data consistency, and interoperable exports built in.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>What makes Clinote CLI different</h2>
+      <div class="card-grid">
+        <article class="card" style="--delay: 0ms">
+          <h3>Structured formats</h3>
+          <p>Maps narrative text into SOAP, H&amp;P, and Discharge Summary sections.</p>
+        </article>
+        <article class="card" style="--delay: 80ms">
+          <h3>Deterministic rules</h3>
+          <p>Transparent parsing rules and alias mapping you can inspect and configure.</p>
+        </article>
+        <article class="card" style="--delay: 160ms">
+          <h3>Batch processing</h3>
+          <p>Process directories of notes while capturing per-file failures and warnings.</p>
+        </article>
+        <article class="card" style="--delay: 240ms">
+          <h3>Flexible exports</h3>
+          <p>Export to Markdown for humans, JSON for systems, CSV for analytics.</p>
+        </article>
+        <article class="card" style="--delay: 320ms">
+          <h3>Bundle handling</h3>
+          <p>Split multi-note files using delimiters or timestamps with warnings.</p>
+        </article>
+        <article class="card" style="--delay: 400ms">
+          <h3>Interactive review</h3>
+          <p>Confirm sections, rename headings, and control heuristics at the terminal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section demo reveal">
+      <div>
+        <h2>Demo</h2>
+        <p>Messy note in, structured output out. No ML summaries, just deterministic rules.</p>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="code-label">Input</p>
+          <pre class="code-block"><code>CC - chest pain
+HPI: started after exercise
+PMH: HTN, asthma
+Assessment: likely MSK strain
+Plan: NSAIDs, follow-up</code></pre>
+        </div>
+        <div>
+          <p class="code-label">Output (JSON)</p>
+          <pre class="code-block"><code>{
+  "format": "hp",
+  "sections": [
+    {"name": "Chief Complaint", "content": "chest pain"},
+    {"name": "HPI", "content": "started after exercise"},
+    {"name": "PMH", "content": "HTN, asthma"},
+    {"name": "Assessment", "content": "likely MSK strain"},
+    {"name": "Plan", "content": "NSAIDs, follow-up"}
+  ]
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Who it is for</h2>
+      <div class="pill-grid">
+        <span>Clinical informatics students</span>
+        <span>Documentation QA teams</span>
+        <span>Research labs</span>
+        <span>Health data engineers</span>
+        <span>Educators</span>
+        <span>Clinical ops prototypes</span>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>Clinote CLI is an educational tool using synthetic demo data only. It is not a medical or legal compliance product.</p>
+  </footer>
 </body>
 </html>

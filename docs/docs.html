@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clinote CLI Docs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Clinote logo" />
+        <span>Clinote CLI</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="docs.html" class="active">Docs</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/your-org/clinote" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section narrow">
+      <h1>CLI Usage</h1>
+      <pre class="code-block"><code>clinote parse --input note.txt --format soap \
+  --out out.json --out-format json --bundle auto
+
+clinote batch --input-dir notes --glob "*.txt" \
+  --format hp --out-dir outputs --out-format csv
+
+clinote sample --out-dir samples --n 6 --bundles 2
+
+clinote validate --config clinote.toml</code></pre>
+
+      <h2>Config reference</h2>
+      <pre class="code-block"><code>[formats.soap]
+section_order = ["Subjective", "Objective", "Assessment", "Plan"]
+
+heading_aliases = { "Hx" = "PMH", "Dx" = "Assessment" }
+
+enable_fallback_heuristics = true
+
+[bundle]
+mode_default = "auto"
+delimiters = ["----- NOTE -----", "=== VISIT ==="]
+
+[csv]
+layout = "wide"
+
+glob_default = "*.txt"</code></pre>
+
+      <h2>Bundle mode</h2>
+      <ul class="doc-list">
+        <li><strong>auto</strong>: split only when delimiters or timestamps appear multiple times.</li>
+        <li><strong>on</strong>: attempt to split and warn if delimiters are not found.</li>
+        <li><strong>off</strong>: treat input as a single note.</li>
+      </ul>
+
+      <h2>Interactive mode</h2>
+      <p>Use <code>--interactive</code> with <code>parse</code> to:</p>
+      <ul class="doc-list">
+        <li>Decide whether fallback heuristics should run.</li>
+        <li>Select which sections to keep.</li>
+        <li>Rename sections before rendering.</li>
+      </ul>
+
+      <h2>Complex bundles: issues and mitigations</h2>
+      <ul class="doc-list">
+        <li>Ambiguous delimiters can cause false splits. Clinote logs warnings and keeps the note intact when unsure.</li>
+        <li>Mixed formats in a single file can map headings to the wrong target sections; interactive mode lets you confirm.</li>
+        <li>Timestamp-only splits may fail when the same date appears inside a note; auto mode refuses weak splits.</li>
+        <li>Heuristic headings can misclassify narrative text; you can disable heuristics or drop sections interactively.</li>
+      </ul>
+
+      <h2>Warnings</h2>
+      <p>Warnings are serialized in JSON output and included in batch reports. They include codes, severity, and line spans.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Docs are for the educational release of Clinote CLI and rely on synthetic data only.</p>
+  </footer>
+</body>
+</html>
